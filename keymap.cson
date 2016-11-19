@@ -1,0 +1,65 @@
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-;': 'window:focus-next-pane'
+  'cmd-k cmd-l': 'pane:split-right-and-copy-active-item'
+  'cmd-k cmd-h': 'pane:split-left-and-copy-active-item'
+
+'atom-text-editor.vim-mode-plus.visual-mode':
+  'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
+
+  'K': 'vim-mode-plus-user:move-selected-text-up'
+  'J': 'vim-mode-plus-user:move-selected-text-down'
+  'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
+  'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
+
+  'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
+  'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
+  'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
+  'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
+
+'atom-text-editor.vim-mode-plus:not(.visual-mode)':
+  'J': 'dillon:move-current-line-down'
+  'K': 'dillon:move-current-line-up'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'space': 'vim-mode-plus:set-register-name-to-*'
+  'E': 'narrow:fold'
+  'ctrl-s': 'vim-mode-plus:transform-smart-word-by-select-list'
+  'cmd-H': 'git-diff:move-to-previous-diff'
+  'cmd-L': 'git-diff:move-to-next-diff'
+  'H': 'vim-mode-plus-user:move-to-previous-symbol'
+  'L': 'vim-mode-plus-user:move-to-next-symbol'
+  'R': 'dillon:rename-param-under-cursor'
+
+'atom-text-editor.vim-mode-plus.normal-mode':
+  # 'S': 'vim-mode-plus:surround-smart-word'
+  's': 'vim-mode-plus:surround'
+  's d': 'vim-mode-plus:delete-surround-any-pair'
+  's c': 'vim-mode-plus:change-surround-any-pair'
+  's C': 'vim-mode-plus:change-surround'
+  's w': 'vim-mode-plus:surround-word'
+  's m': 'vim-mode-plus:map-surround'
+
+
+ # if not in vmp, cancel
+'body':
+  'ctrl-i': 'core:cancel'
+  'ctrl-o': 'core:cancel'
+
+'atom-text-editor.vim-mode-plus':
+  'ctrl-i': 'vim-mode-plus:reset-normal-mode'
+  'ctrl-o': 'dillon:normal-mode-and-save'
+  'ctrl-z': 'dillon:undo-and-normal-mode'
+
+'atom-text-editor.vim-mode-plus:not(.normal-mode)':
+  'ctrl-i': 'vim-mode-plus:activate-normal-mode'
+
+# smalls configuration
+'atom-text-editor.smalls.search':
+  ';': 'smalls:jump'
+
+'atom-text-editor:not([mini])':
+  'ctrl-;': 'smalls:start'

@@ -1,0 +1,38 @@
+"*":
+  "atom-color-highlight": {}
+  build:
+    buildOnSave: true
+    hidePanelHeading: true
+    panelVisibility: "Keep Visible"
+    stealFocus: false
+  core:
+    disabledPackages: [
+      "vim-mode"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
+  "cyber-dojo":
+    workspace: "/Users/dillon/Dropbox/opensource/katas/cyberdojo"
+  editor:
+    fontSize: 15
+    invisibles: {}
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "74b4342b-d1d5-a340-d5c1-b2a5af1ede2d"
+  metrics:
+    userId: "708651a932bd28da2969831a29830d5a9ebf3d21"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  "ruby-test":
+    specFramework: "minitest"
+    testFramework: "minitest"
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    highlightSearch: true
+    incrementalSearch: true
+  welcome:
+    showOnStartup: false
