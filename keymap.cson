@@ -20,9 +20,9 @@
   'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
   'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
 
-'atom-text-editor.vim-mode-plus:not(.visual-mode)':
-  'J': 'dillon:move-current-line-down'
+'atom-text-editor.vim-mode-plus:not(.insert-mode):not(.visual-mode)':
   'K': 'dillon:move-current-line-up'
+  'J': 'dillon:move-current-line-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'space': 'vim-mode-plus:set-register-name-to-*'
