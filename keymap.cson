@@ -33,6 +33,7 @@
   'H': 'vim-mode-plus-user:move-to-previous-symbol'
   'L': 'vim-mode-plus-user:move-to-next-symbol'
   'R': 'dillon:rename-param-under-cursor'
+  'ctrl-n': 'linter:next-error'
 
 'atom-text-editor.vim-mode-plus.normal-mode':
   # 'S': 'vim-mode-plus:surround-smart-word'
