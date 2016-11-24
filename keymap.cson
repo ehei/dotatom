@@ -3,7 +3,7 @@
 # * https://atom.io/docs/latest/advanced/keymaps
 
 'atom-workspace atom-text-editor:not([mini])':
-  'cmd-;': 'window:focus-next-pane'
+  'cmd-;': 'dillon:focus-next-pane'
   'cmd-k cmd-l': 'pane:split-right-and-copy-active-item'
   'cmd-k cmd-h': 'pane:split-left-and-copy-active-item'
 
