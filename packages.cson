@@ -4,6 +4,7 @@ packages: [
   "busy"
   "choose-pane"
   "color-picker"
+  "cursor-history"
   "cyber-dojo"
   "dash"
   "elm"

@@ -6,6 +6,10 @@
   'cmd-;': 'dillon:focus-next-pane'
   'cmd-k cmd-l': 'pane:split-right-and-copy-active-item'
   'cmd-k cmd-h': 'pane:split-left-and-copy-active-item'
+  'ctrl-i':     'cursor-history:next'
+  'ctrl-o':     'cursor-history:prev'
+  'ctrl-cmd-i': 'cursor-history:next-within-editor'
+  'ctrl-cmd-o': 'cursor-history:prev-within-editor'
 
 'atom-text-editor.vim-mode-plus.visual-mode':
   'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
@@ -48,22 +52,22 @@
   'y s m': 'vim-mode-plus:map-surround'
 
 
- # if not in vmp, cancel
 'body':
-  'ctrl-i': 'core:cancel'
-  'ctrl-o': 'core:cancel'
+   # if not in vmp, cancel
+  'ctrl-;': 'core:cancel'
+  'ctrl-\'': 'core:cancel'
 
 'atom-text-editor.vim-mode-plus':
-  'ctrl-i': 'vim-mode-plus:reset-normal-mode'
-  'ctrl-o': 'dillon:normal-mode-and-save'
+  'ctrl-;': 'vim-mode-plus:reset-normal-mode'
+  'ctrl-\'': 'dillon:normal-mode-and-save'
   'ctrl-z': 'dillon:undo-and-normal-mode'
 
 'atom-text-editor.vim-mode-plus:not(.normal-mode)':
-  'ctrl-i': 'vim-mode-plus:activate-normal-mode'
+  'ctrl-;': 'vim-mode-plus:activate-normal-mode'
 
 # smalls configuration
 'atom-text-editor.smalls.search':
   ';': 'smalls:jump'
 
 'atom-text-editor:not([mini])':
-  'ctrl-;': 'smalls:start'
+  'cmd-;': 'smalls:start'
