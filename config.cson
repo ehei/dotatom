@@ -25,6 +25,8 @@
   linter: {}
   metrics:
     userId: "708651a932bd28da2969831a29830d5a9ebf3d21"
+  "nord-atom-ui":
+    tabSizing: false
   "package-sync":
     createOnChange: true
     forceOverwrite: true
