@@ -45,11 +45,23 @@
   'R': 'dillon:rename-param-under-cursor'
   'ctrl-n': 'linter:next-error'
 
+'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
+  ";": 'vim-mode-plus:inner-any-pair'
+
+  ":": 'vim-mode-plus:inner-any-pair-allow-forwarding'
+
+  # Use closing pair as forwarding version of pair-text-object
+  'i }': 'vim-mode-plus:inner-curly-bracket-allow-forwarding'
+  'a }': 'vim-mode-plus:a-curly-bracket-allow-forwarding'
+
+  'i >': 'vim-mode-plus:inner-angle-bracket-allow-forwarding'
+  'a >': 'vim-mode-plus:a-angle-bracket-allow-forwarding'
+
 'atom-text-editor.vim-mode-plus.normal-mode':
   'y s': 'vim-mode-plus:surround'
   'd s': 'vim-mode-plus:delete-surround-any-pair'
   'd S': 'vim-mode-plus:delete-surround'
-  'c s': 'vim-mode-plus:change-surround-any-pair'
+  'c s': 'vim-mode-plus:change-surround-any-pair-allow-forwarding'
   'c S': 'vim-mode-plus:change-surround'
   'y s w': 'vim-mode-plus:surround-word'
   'y s m': 'vim-mode-plus:map-surround'
