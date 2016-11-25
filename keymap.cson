@@ -44,6 +44,7 @@
   'L': 'vim-mode-plus-user:move-to-next-symbol'
   'R': 'dillon:rename-param-under-cursor'
   'ctrl-n': 'linter:next-error'
+  '!': 'vim-mode-plus-user:replace-with-execution'
 
 'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
   ";": 'vim-mode-plus:inner-any-pair'
