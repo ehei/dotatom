@@ -80,15 +80,15 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
     @commandPrefix: 'vim-mode-plus-user'
     @registerCommand()
     requireTarget: false
+    insertionRow: ->
+      @editor.getCursorScreenPosition().row
     execute: ->
-      @editor.insertNewlineBelow()
+      @editor.getBuffer().insert([@insertionRow(), Infinity], "\n".repeat(@getCount()))
 
-  class InsertNewlineAbove extends Operator
-    @commandPrefix: 'vim-mode-plus-user'
+  class InsertNewlineAbove extends InsertNewlineBelow
     @registerCommand()
-    requireTarget: false
-    execute: ->
-      @editor.insertNewlineAbove()
+    insertionRow: ->
+      super() - 1
 
   # vim-mode-plus align regexp
   alignLines = require '/Users/dillon/.atom/packages/align-regexp/lib/align-lines';
