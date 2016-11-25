@@ -57,3 +57,9 @@ atom.commands.add 'atom-text-editor', 'dillon:undo-and-normal-mode', (event) ->
 atom.commands.add 'atom-text-editor', 'dillon:focus-next-pane', (event) ->
     atom.commands.dispatch(this, 'window:focus-next-pane')
     atom.commands.dispatch(this, 'vim-mode-plus:reset-normal-mode')
+
+atom.commands.add 'atom-text-editor', 'custom:insert-newline-above': ->
+    atom.workspace.getActiveTextEditor()?.insertNewlineAbove()
+
+atom.commands.add 'atom-text-editor', 'custom:insert-newline-below': ->
+    atom.workspace.getActiveTextEditor()?.insertNewlineBelow()
