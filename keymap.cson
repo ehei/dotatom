@@ -26,8 +26,8 @@
   'J': 'dillon:move-current-line-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'space': 'vim-mode-plus:set-register-name-to-*'
   'E': 'narrow:fold'
+  'space space': 'vim-mode-plus:set-register-name-to-*'
   'ctrl-s': 'vim-mode-plus:transform-smart-word-by-select-list'
   'cmd-H': 'git-diff:move-to-previous-diff'
   'cmd-L': 'git-diff:move-to-next-diff'
