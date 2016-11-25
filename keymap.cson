@@ -49,9 +49,7 @@
   '!': 'vim-mode-plus-user:replace-with-execution'
 
 'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
-  ";": 'vim-mode-plus:inner-any-pair'
-
-  ":": 'vim-mode-plus:inner-any-pair-allow-forwarding'
+  ';': 'vim-mode-plus:inner-any-pair-allow-forwarding'
 
   # Use closing pair as forwarding version of pair-text-object
   'i }': 'vim-mode-plus:inner-curly-bracket-allow-forwarding'
