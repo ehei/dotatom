@@ -72,6 +72,11 @@
    # if not in vmp, cancel
   'ctrl-;': 'core:cancel'
   'ctrl-\'': 'core:cancel'
+  # change tab ordering (tip from https://github.com/atom/atom/issues/11650#issuecomment-261424720)
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
 
 'atom-text-editor.vim-mode-plus':
   'ctrl-;': 'vim-mode-plus:reset-normal-mode'
