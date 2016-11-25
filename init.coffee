@@ -96,5 +96,14 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
   class AlignRegex extends TransformString
     @commandPrefix: 'vim-mode-plus-user'
     @registerCommand()
+    requireInput: true
     getNewText: (text) ->
-      alignLines(text, /=/)
+      alignLines(text, RegExp(@input))
+
+    initialize: ->
+      super()
+      @focusInput(15)
+
+    onConfirm: (@input) ->
+      @input = @char
+      @processOperation()
