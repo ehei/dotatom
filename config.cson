@@ -11,8 +11,8 @@
     ]
     telemetryConsent: "limited"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "one-dark-ui"
+      "atom-dark-syntax"
     ]
   "cyber-dojo":
     workspace: "/Users/dillon/Dropbox/opensource/katas/cyberdojo"
