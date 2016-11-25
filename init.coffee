@@ -65,7 +65,7 @@ atom.commands.add 'atom-text-editor', 'custom:insert-newline-below': ->
     atom.workspace.getActiveTextEditor()?.insertNewlineBelow()
 
 
-# vim-mode-plus align regexp
+# vim-mode-plus extensions
 consumeService = (packageName, providerName, fn) ->
   disposable = atom.packages.onDidActivatePackage (pack) ->
     if pack.name is packageName
@@ -74,11 +74,27 @@ consumeService = (packageName, providerName, fn) ->
       disposable.dispose()
 
 consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
+  # vim-mode-plus add spaces above or below
+  Operator = Base.getClass('Operator')
+  class InsertNewlineBelow extends Operator
+    @commandPrefix: 'vim-mode-plus-user'
+    @registerCommand()
+    requireTarget: false
+    execute: ->
+      @editor.insertNewlineBelow()
+
+  class InsertNewlineAbove extends Operator
+    @commandPrefix: 'vim-mode-plus-user'
+    @registerCommand()
+    requireTarget: false
+    execute: ->
+      @editor.insertNewlineAbove()
+
+  # vim-mode-plus align regexp
   alignLines = require '/Users/dillon/.atom/packages/align-regexp/lib/align-lines';
   TransformString = Base.getClass('TransformString')
   class AlignRegex extends TransformString
     @commandPrefix: 'vim-mode-plus-user'
+    @registerCommand()
     getNewText: (text) ->
       alignLines(text, /=/)
-
-  AlignRegex.registerCommand()
