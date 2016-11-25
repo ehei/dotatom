@@ -9,6 +9,7 @@ packages: [
   "dash"
   "elm"
   "example-package"
+  "expand-region"
   "git-diff-details"
   "jumpy"
   "language-diff"
