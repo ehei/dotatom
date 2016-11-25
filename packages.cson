@@ -16,6 +16,7 @@ packages: [
   "language-elixir"
   "language-elm"
   "linter"
+  "linter-elixir-credo"
   "minitest-snippets"
   "narrow"
   "nord-atom-syntax"
