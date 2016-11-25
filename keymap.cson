@@ -43,6 +43,8 @@
   'H': 'vim-mode-plus-user:move-to-previous-symbol'
   'L': 'vim-mode-plus-user:move-to-next-symbol'
   'R': 'dillon:rename-param-under-cursor'
+  'g r': 'vim-mode-plus:reverse'
+  'g s': 'vim-mode-plus:sort'
   'ctrl-n': 'linter:next-error'
   '!': 'vim-mode-plus-user:replace-with-execution'
 
