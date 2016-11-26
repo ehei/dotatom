@@ -110,6 +110,7 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
   class Exchange extends Operator
     @commandPrefix: 'vim-mode-plus-user'
     @registerCommand()
+    hover: icon: ':arrows_counterclockwise:', emoji: ':arrows_counterclockwise:'
     acceptPresetOccurrence: false
     requireTarget: true
     acceptPersistentSelection: false
@@ -125,3 +126,14 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
         @vimState.clearPersistentSelections()
       else
         @persistentSelection.markBufferRange(selection.getBufferRange())
+
+
+  class ExchangeLine extends Exchange
+    @registerCommand()
+    wise: 'linewise'
+
+    initialize: ->
+      super()
+      @target = 'MoveToRelativeLine' if @isMode('normal')
+      if @isMode('visual', 'characterwise')
+        @stayOnLinewise = false

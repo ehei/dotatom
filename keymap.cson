@@ -73,6 +73,8 @@
   'y s w': 'vim-mode-plus:surround-word'
   'y s m': 'vim-mode-plus:map-surround'
   'c x': 'vim-mode-plus-user:exchange'
+  'c x x': 'vim-mode-plus-user:exchange-line'
+  'c x c': 'vim-mode-plus:clear-persistent-selection'
 
 
 'body':
