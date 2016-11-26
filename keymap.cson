@@ -72,6 +72,7 @@
   'c S': 'vim-mode-plus:change-surround'
   'y s w': 'vim-mode-plus:surround-word'
   'y s m': 'vim-mode-plus:map-surround'
+  'c x': 'vim-mode-plus-user:exchange'
 
 
 'body':
