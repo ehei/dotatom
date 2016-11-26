@@ -105,3 +105,20 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
 
     getNewText: (text) ->
       alignLines(text, RegExp(@input))
+
+  Operator = Base.getClass('Operator')
+  class Exchange extends Operator
+    @commandPrefix: 'vim-mode-plus-user'
+    @registerCommand()
+    acceptPresetOccurrence: false
+
+    mutateSelection: (selection) ->
+      if @vimState.persistentSelection.getMarkerBufferRanges().length > 0
+        other = @vimState.persistentSelection.getMarkerBufferRanges()[0]
+        otherText = @editor.getTextInRange(other)
+        selectionText = selection.getText()
+        @editor.setTextInBufferRange(other, selectionText)
+        selection.insertText(otherText)
+        @vimState.clearPersistentSelections()
+      else
+        @persistentSelection.markBufferRange(selection.getBufferRange())
