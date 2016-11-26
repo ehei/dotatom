@@ -60,6 +60,9 @@
   'i >': 'vim-mode-plus:inner-angle-bracket-allow-forwarding'
   'a >': 'vim-mode-plus:a-angle-bracket-allow-forwarding'
 
+  'i )': 'vim-mode-plus:inner-parenthesis-allow-forwarding'
+  'a )': 'vim-mode-plus:a-parenthesis-allow-forwarding'
+
 'atom-text-editor.vim-mode-plus.normal-mode':
   'y s': 'vim-mode-plus:surround'
   'd s': 'vim-mode-plus:delete-surround-any-pair'
