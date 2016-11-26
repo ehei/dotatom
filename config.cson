@@ -37,5 +37,8 @@
     clearHighlightSearchOnResetNormalMode: true
     highlightSearch: true
     incrementalSearch: true
+    showHoverOnOperate: true
+    showHoverOnOperateIcon: "emoji"
+    showHoverSearchCounter: true
   welcome:
     showOnStartup: false
