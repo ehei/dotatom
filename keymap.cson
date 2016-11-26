@@ -48,6 +48,7 @@
   'g s': 'vim-mode-plus:sort'
   'ctrl-n': 'linter:next-error'
   '!': 'vim-mode-plus-user:replace-with-execution'
+  'ctrl-\\': 'window:reload'
 
 'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
   ';': 'vim-mode-plus:inner-any-pair-allow-forwarding'
