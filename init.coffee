@@ -111,6 +111,9 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
     @commandPrefix: 'vim-mode-plus-user'
     @registerCommand()
     acceptPresetOccurrence: false
+    requireTarget: true
+    acceptPersistentSelection: false
+    stayAtSamePosition: true
 
     mutateSelection: (selection) ->
       if @vimState.persistentSelection.getMarkerBufferRanges().length > 0
