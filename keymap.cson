@@ -42,7 +42,7 @@
   'cmd-L': 'git-diff:move-to-next-diff'
   'H': 'vim-mode-plus-user:move-to-previous-symbol'
   'L': 'vim-mode-plus-user:move-to-next-symbol'
-  # 'R': 'dillon:rename-param-under-cursor'
+  'f2': 'dillon:rename-param-under-cursor'
   'R': 'vim-mode-plus-user:align-regex'
   'g r': 'vim-mode-plus:reverse'
   'g s': 'vim-mode-plus:sort'
