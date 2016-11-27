@@ -33,6 +33,7 @@
   'J': 'dillon:move-current-line-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'enter': 'vim-mode-plus:move-to-last-line'
   'E': 'narrow:fold'
   'space space': 'vim-mode-plus:set-register-name-to-*'
   'space o': 'vim-mode-plus-user:insert-newline-below'
