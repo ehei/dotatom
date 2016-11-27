@@ -41,8 +41,9 @@
   'ctrl-s': 'vim-mode-plus:transform-smart-word-by-select-list'
   'cmd-H': 'git-diff:move-to-previous-diff'
   'cmd-L': 'git-diff:move-to-next-diff'
-  'H': 'vim-mode-plus-user:move-to-previous-symbol'
-  'L': 'vim-mode-plus-user:move-to-next-symbol'
+  # TODO: find keys for these
+  # 'H': 'vim-mode-plus-user:move-to-previous-symbol'
+  # 'L': 'vim-mode-plus-user:move-to-next-symbol'
   'f2': 'dillon:rename-param-under-cursor'
   'R': 'vim-mode-plus-user:align-regex'
   'g r': 'vim-mode-plus:reverse'
