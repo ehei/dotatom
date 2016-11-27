@@ -12,7 +12,6 @@
   'ctrl-cmd-o': 'cursor-history:prev-within-editor'
 
 'atom-text-editor.vim-mode-plus.visual-mode':
-  'x': 'vim-mode-plus-user:exchange'
   'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
   'S': 'vim-mode-plus:surround'
 
@@ -72,10 +71,6 @@
   'c S': 'vim-mode-plus:change-surround'
   'y s w': 'vim-mode-plus:surround-word'
   'y s m': 'vim-mode-plus:map-surround'
-  'c x': 'vim-mode-plus-user:exchange'
-  'c x x': 'vim-mode-plus-user:exchange-line'
-  'c x c': 'vim-mode-plus:clear-persistent-selection'
-
 
 'body':
    # if not in vmp, cancel
