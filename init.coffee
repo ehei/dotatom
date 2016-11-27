@@ -105,35 +105,3 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
 
     getNewText: (text) ->
       alignLines(text, RegExp(@input))
-
-  Operator = Base.getClass('Operator')
-  class Exchange extends Operator
-    @commandPrefix: 'vim-mode-plus-user'
-    @registerCommand()
-    hover: icon: ':arrows_counterclockwise:', emoji: ':arrows_counterclockwise:'
-    acceptPresetOccurrence: false
-    requireTarget: true
-    acceptPersistentSelection: false
-    stayAtSamePosition: true
-
-    mutateSelection: (selection) ->
-      if @vimState.persistentSelection.getMarkerBufferRanges().length > 0
-        other = @vimState.persistentSelection.getMarkerBufferRanges()[0]
-        otherText = @editor.getTextInRange(other)
-        selectionText = selection.getText()
-        @editor.setTextInBufferRange(other, selectionText)
-        selection.insertText(otherText)
-        @vimState.clearPersistentSelections()
-      else
-        @persistentSelection.markBufferRange(selection.getBufferRange())
-
-
-  class ExchangeLine extends Exchange
-    @registerCommand()
-    wise: 'linewise'
-
-    initialize: ->
-      super()
-      @target = 'MoveToRelativeLine' if @isMode('normal')
-      if @isMode('visual', 'characterwise')
-        @stayOnLinewise = false
