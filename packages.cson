@@ -27,6 +27,7 @@ packages: [
   "ruby-block"
   "ruby-test"
   "smalls"
+  "toggle-markdown-task"
   "vim-mode-plus"
   "vim-mode-plus-exchange"
   "vim-mode-plus-move-selected-text"

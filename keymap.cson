@@ -98,6 +98,7 @@
 
 'atom-text-editor:not([mini])':
   'cmd-;': 'smalls:start'
+  'g ;': 'toggle-markdown-task:toggle'
 
 'atom-text-editor':
   'alt-up': 'expand-region:expand'
