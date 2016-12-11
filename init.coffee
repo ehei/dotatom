@@ -106,3 +106,12 @@ consumeService 'vim-mode-plus', 'provideVimModePlus', ({Base}) ->
 
     getNewText: (text) ->
       alignLines(text, RegExp(@input))
+
+  class Duplicate extends Operator
+    @commandPrefix: 'vim-mode-plus-user'
+    hover: icon: ':arrows_counterclockwise:', emoji: ':arrows_counterclockwise:'
+    @registerCommand()
+    trackChange: true
+
+    mutateSelection: (selection) ->
+      @editor.duplicateLines()

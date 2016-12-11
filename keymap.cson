@@ -26,13 +26,15 @@
   'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
 
 'atom-text-editor.vim-mode-plus.operator-pending-mode':
-  '/': 'vim-mode-plus:toggle-line-comments' # g / / toggles comment on line
+  '/': 'vim-mode-plus:toggle-line-comments' # g// toggles comment on line
+  'd': 'vim-mode-plus-user:duplicate' # ydd duplicates line
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode):not(.visual-mode)':
   'K': 'dillon:move-current-line-up'
   'J': 'dillon:move-current-line-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'y d': 'vim-mode-plus-user:duplicate'
   'enter': 'vim-mode-plus:move-to-last-line'
   'E': 'narrow:fold'
   'space space': 'vim-mode-plus:set-register-name-to-*'
