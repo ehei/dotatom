@@ -24,6 +24,15 @@
 # '.text.html.elixir':
 #   ''
 
+'.source.elixir':
+  'def with spec':
+    'prefix': 'ds'
+    'body': '''
+            @spec $1 :: $2
+            def $1 do
+              $3
+            end'''
+
 '.text.html.elixir':
   'EEx Printing Tag':
     'prefix': '='
