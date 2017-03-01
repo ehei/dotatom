@@ -8,6 +8,7 @@
   core:
     disabledPackages: [
       "vim-mode"
+      "elmjutsu"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -17,12 +18,20 @@
   "cyber-dojo":
     workspace: "/Users/dillon/Dropbox/opensource/katas/cyberdojo"
   editor:
-    fontSize: 15
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
+  elmjutsu:
+    autocompleteEnabled: true
+    autocompleteSnippetsEnabled: true
+    cacheDirectory: "/var/folders/rp/2jl5jpgs565fdvks2gtfkrd00000gn/T/elmjutsu52995uwKfg003zyyW"
+    hyperclickEnabled: true
+    typeAwareAutocompleteEnabled: true
   "exception-reporting":
     userId: "74b4342b-d1d5-a340-d5c1-b2a5af1ede2d"
+  "language-elm": {}
   linter: {}
+  "linter-elm-make": {}
   metrics:
     userId: "708651a932bd28da2969831a29830d5a9ebf3d21"
   "nord-atom-ui":
@@ -33,6 +42,8 @@
   "ruby-test":
     specFramework: "minitest"
     testFramework: "minitest"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus":
     clearHighlightSearchOnResetNormalMode: true
     highlightSearch: true
@@ -40,5 +51,6 @@
     showHoverOnOperate: true
     showHoverOnOperateIcon: "emoji"
     showHoverSearchCounter: true
+    useSmartcaseForSearch: true
   welcome:
     showOnStartup: false

@@ -49,6 +49,14 @@ atom.commands.add 'atom-text-editor', 'dillon:normal-mode-and-save', ->
   atom.commands.dispatch(this, 'vim-mode-plus:reset-normal-mode')
   atom.commands.dispatch(this, 'core:save')
 
+atom.commands.add 'atom-text-editor', 'dillon:elm-quick-fix-and-save', ->
+  atom.commands.dispatch(this, 'linter-elm-make:quick-fix')
+  atom.commands.dispatch(this, 'core:save')
+
+atom.commands.add 'atom-text-editor', 'dillon:elm-quick-fix-and-save-all', ->
+  atom.commands.dispatch(this, 'linter-elm-make:quick-fix-all')
+  atom.commands.dispatch(this, 'core:save')
+
 atom.commands.add 'atom-text-editor', 'dillon:undo-and-normal-mode', ->
   atom.commands.dispatch(this, 'vim-mode-plus:activate-normal-mode')
   atom.commands.dispatch(this, 'vim-mode-plus:undo')

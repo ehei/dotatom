@@ -15,10 +15,10 @@
   'ctrl-t': 'vim-mode-plus-user:move-selected-text-toggle-overwrite'
   'S': 'vim-mode-plus:surround'
 
-  'K': 'vim-mode-plus-user:move-selected-text-up'
-  'J': 'vim-mode-plus-user:move-selected-text-down'
-  'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
-  'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
+  'ctrl-k': 'vim-mode-plus-user:move-selected-text-up'
+  'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
+  # 'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
+  # 'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
 
   'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
   'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
@@ -29,18 +29,18 @@
   '/': 'vim-mode-plus:toggle-line-comments' # g// toggles comment on line
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode):not(.visual-mode)':
-  'K': 'dillon:move-current-line-up'
-  'J': 'dillon:move-current-line-down'
+  'ctrl-k': 'dillon:move-current-line-up'
+  'ctrl-j': 'dillon:move-current-line-down'
 
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'enter': 'vim-mode-plus:move-to-last-line'
+  # 'enter': 'vim-mode-plus:move-to-last-line'
   'E': 'narrow:fold'
   'space space': 'vim-mode-plus:set-register-name-to-*'
   'space o': 'vim-mode-plus-user:insert-newline-below'
   'space O': 'vim-mode-plus-user:insert-newline-above'
   'ctrl-s': 'vim-mode-plus:transform-smart-word-by-select-list'
-  'cmd-H': 'git-diff:move-to-previous-diff'
-  'cmd-L': 'git-diff:move-to-next-diff'
+  # 'cmd-H': 'git-diff:move-to-previous-diff'
+  # 'cmd-L': 'git-diff:move-to-next-diff'
   # TODO: find keys for these
   # 'H': 'vim-mode-plus-user:move-to-previous-symbol'
   # 'L': 'vim-mode-plus-user:move-to-next-symbol'
@@ -48,9 +48,14 @@
   'R': 'vim-mode-plus-user:align-regex'
   'g r': 'vim-mode-plus:reverse'
   'g s': 'vim-mode-plus:sort'
-  'ctrl-n': 'linter:next-error'
+  'Q': 'linter:previous-error'
+  'q': 'linter:next-error'
   '!': 'vim-mode-plus-user:replace-with-execution'
   'ctrl-\\': 'window:reload'
+
+  # 'q': 'atom-keyboard-macros-vim:toggle_record_macro_vim'
+  # '@': 'atom-keyboard-macros-vim:execute_macro_vim'
+  # 'Q': 'atom-keyboard-macros:call_last_kbd_macro'
 
 'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
   ';': 'vim-mode-plus:inner-any-pair-allow-forwarding'
@@ -64,6 +69,12 @@
 
   'i )': 'vim-mode-plus:inner-parenthesis-allow-forwarding'
   'a )': 'vim-mode-plus:a-parenthesis-allow-forwarding'
+
+  'i ]':  'vim-mode-plus:inner-square-bracket-allow-forwarding'
+  'a ]':  'vim-mode-plus:a-square-bracket-allow-forwarding'
+
+  'i space': 'vim-mode-plus-user:inner-whitespace'
+  'a space': 'vim-mode-plus-user:a-whitespace'
 
 'atom-text-editor.vim-mode-plus.normal-mode':
   'y s': 'vim-mode-plus:surround'
@@ -99,8 +110,15 @@
 
 'atom-text-editor:not([mini])':
   'cmd-;': 'smalls:start'
-  'g ;': 'toggle-markdown-task:toggle'
+  # 'g ;': 'toggle-markdown-task:toggle'
 
 'atom-text-editor':
   'alt-up': 'expand-region:expand'
   'alt-down': 'expand-region:shrink'
+  'ctrl-h': 'git-diff:move-to-previous-diff'
+  'ctrl-l': 'git-diff:move-to-next-diff'
+
+"atom-text-editor[data-grammar='source elm']":
+  'ctrl-.': 'dillon:elm-quick-fix-and-save'
+  'ctrl-,': 'dillon:elm-quick-fix-and-save-all'
+  'cmd-r': 'elmjutsu:go-to-symbol'
