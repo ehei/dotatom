@@ -1,8 +1,6 @@
 packages: [
-  "atom-elixir" #cut
   "busy"
   "color-picker"
-  "cyber-dojo" #cut
   "dash"
   "elm-format"
   "elm-instant"
@@ -11,10 +9,8 @@ packages: [
   "hyperclick"
   "jumpy"
   "language-diff"
-  "language-elixir" #cut
   "language-elm"
   "linter"
-  "linter-elixir-credo" #cut
   "linter-elm-make"
   "minitest-snippets"
   "package-sync"
